@@ -2,10 +2,24 @@
 #include <bitset>
 #include <limits>
 
+namespace  HO
+{
+    template <typename T>
+    short CountBits(T x)
+    {
+        std::bitset<std::numeric_limits<T>::digits> s(x);
+        return s.count();
+    }
+}
+
 short CountBits(unsigned int x)
 {
-    std::bitset<std::numeric_limits<decltype(x)>::digits> s(x);
-    return s.count();
+    short n = 0;
+    while (x) {
+        if (x & 0b1) n++;
+        x = x >> 1;
+    }
+    return n;
 }
 
 int main(int argc, char* argv[])
