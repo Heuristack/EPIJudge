@@ -21,11 +21,7 @@ bool HasTwoSum(vector<int> A, int t)
 
 bool HasThreeSum(vector<int> A, int t)
 {
-  std::unordered_map<int,int> m;
-  for (auto e : A) {
-    m.emplace(e,t-e);
-  }
-  return std::any_of(begin(m), end(m), [A](auto e){ return HasTwoSum(A,e.second); });
+  return std::any_of(begin(A), end(A), [A,t](auto e){ return HasTwoSum(A,t-e); });
 }
 
 int main(int argc, char* argv[]) {
