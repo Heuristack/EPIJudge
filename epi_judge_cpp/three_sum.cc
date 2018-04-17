@@ -12,9 +12,9 @@ bool HasTwoSum(vector<int> A, int t)
   int j = A.size() - 1;
   while (i <= j) {
     int s = A[i] + A[j];
-    if (s < t) { i++; }
-    if (s > t) { j--; }
-    if (s == t) return true;
+    if      (s < t) { i++; }
+    else if (s > t) { j--; }
+    else return true;
   }
   return false;
 }

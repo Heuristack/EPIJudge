@@ -2,7 +2,7 @@
 #include <bitset>
 #include <limits>
 
-namespace  HO
+namespace HO
 {
     template <typename T>
     short CountBits(T x)
