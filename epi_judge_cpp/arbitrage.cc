@@ -3,7 +3,8 @@
 
 using std::vector;
 
-bool IsArbitrageExist(vector<vector<double>> graph) {
+bool IsArbitrageExist(vector<vector<double>> graph)
+{
   // Implement this placeholder.
   return true;
 }
